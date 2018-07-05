@@ -19,9 +19,11 @@
 <!-- another exercise -->
     <div id="book">
         <!-- <h2 v-on:click="sayHello">{{ title }}</h2> -->
-        <h2 @click="sayHello">{{ title }}</h2>
-        <p @click="aboutAuthor">{{ author }}</p>
-        <p @click="changeColor">{{ summary }} </p>
+        <h2 @click="toggleDetails">{{ title }}</h2>
+        <div id="details" v-show="showDetails">
+          <p>{{ author }}</p>
+          <p>{{ summary }} </p>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
