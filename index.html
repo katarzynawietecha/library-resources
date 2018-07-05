@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="en">
   <head>
     <title>Exercises</title>
     <meta charset="utf-8">
@@ -7,13 +7,23 @@
   </head>
   <body>
     <div id="app">
-      <h1>{{ title }}</h1> <!--placeholder-->
+      <h1>{{ title }}</h1>
       <p>{{ message }}</p>
     </div>
     <div id="app2">
-      <h1>{{ title + ", " + name.toUpperCase() + "!"}}</h1> <!--placeholder-->
+      <h1 v-text="title"></h1>
+      <!-- <img v-bind:src="img.src" v-bind:alt="img.alt"> -->
+      <img :src="img.src" :alt="img.alt">
       <p>{{ message }}</p>
     </div>
+<!-- another exercise -->
+    <div id="book">
+        <!-- <h2 v-on:click="sayHello">{{ title }}</h2> -->
+        <h2 @click="sayHello">{{ title }}</h2>
+        <p @click="aboutAuthor">{{ author }}</p>
+        <p @click="changeColor">{{ summary }} </p>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="js/app.js" type="text/javascript"></script>
   </body>
