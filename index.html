@@ -16,15 +16,28 @@
       <img :src="img.src" :alt="img.alt">
       <p>{{ message }}</p>
     </div>
+
 <!-- another exercise -->
     <div id="book">
         <!-- <h2 v-on:click="sayHello">{{ title }}</h2> -->
-        <h2 @click="toggleDetails">{{ title }}</h2>
+        <h2 @click="showDetails = !showDetails">{{ title }}</h2>
         <div id="details" v-show="showDetails">
           <p>{{ author }}</p>
           <p>{{ summary }} </p>
       </div>
     </div>
+
+<!-- next exercise -->
+  <div id="colors">
+    <ul>
+      <!-- <li v-bind:style="{color: item}" v-for="item in rainbow">{{ item }}</li>  -->
+            <!--Explanation:  item - single element in rainbow data (array) - the name can be anything;
+                              in - keyword indicating that we're looping through list;
+                              rainbow - name of the list thak we're looping through;
+                              v-bind: color - attibiute; item: item in list;-->
+      <li v-bind:style="{color: item}" v-for="(item, index) in rainbow">{{ index }} - {{ item }}</li>
+    </ul>
+  </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="js/app.js" type="text/javascript"></script>

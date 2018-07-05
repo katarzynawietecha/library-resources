@@ -29,8 +29,16 @@ const book = new Vue({
       showDetails: false
     },
     methods: {
-      toggleDetails: function(){
-        this.showDetails = !this.showDetails;
-      }
+
     }
 });
+
+
+const colorsOfTheRainbow = ["red", "orange", "yelow", "green", "blue", "indigo", "violet"];
+
+const myRainbow = new Vue({
+  el: "#colors",
+  data: {
+    rainbow: colorsOfTheRainbow
+  }
+})
