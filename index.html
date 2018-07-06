@@ -10,10 +10,10 @@
       <h1>{{ title }}</h1>
       <select @change="filterList">
         <option>Select type of media</option>
-        <option v-for="product in mediaList">{{ product.type }}</option>
+        <option v-for="product in uniqueItemsList">{{ product }}</option>
       </select>
       <ul>    <!-- v-show:  if the type of item is the same as selected - show it-->
-        <li v-show="type === item.type"
+        <li v-show="type === '' || type === item.type"
             v-for="item in mediaList"
             @click="toggleDetail(item)">  <!-- click on li changes div's visability -->
           <h3> {{ item.title }}</h3>

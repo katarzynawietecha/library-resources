@@ -47,6 +47,20 @@ const media = [
       type: 'streaming video',
       contributor: '',
       showDetail: false,
+    },
+    {
+      title: 'The Sirens of Titan',
+      description: "Mankind flung its advance agents ever outward, ever outward... it flung them like stones.",
+      type: 'CD',
+      contributor: 'Kurt Vonnegut',
+      showDetail: false,
+    },
+    {
+      title: 'Hop on Pop',
+      description: "A delightful children's book.",
+      type: 'CD',
+      contributor: 'Dr. Suess',
+      showDetail: false,
     }
   ]
 
@@ -64,7 +78,18 @@ const app = new Vue({ /*vue instance*/
     },
     filterList: function(event){
       this.type = event.target.value;
-      console.log("this.type: "+this.type);
+      // console.log("this.type: "+this.type);
+    }
+  },
+  computed: {
+    uniqueItemsList: function(){
+      const uniqueTypesList = [];
+      for (var i=0; i<this.mediaList.length; i++){
+        if(uniqueTypesList.indexOf(this.mediaList[i].type) == -1){
+          uniqueTypesList.push(this.mediaList[i].type);
+        }
+      }
+      return uniqueTypesList;
     }
   }
 });
