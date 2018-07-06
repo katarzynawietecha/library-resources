@@ -1,44 +1,65 @@
+const media = [
+    {
+      title: 'Hop on Pop',
+      description: "A delightful children's book.",
+      type: 'book',
+      contributor: 'Dr. Suess',
+      showDetail: false,
+    },
+    {
+      title: 'The Joy of Painting',
+      description: "Create a world of happy little trees!",
+      type: 'DVD',
+      contributor: 'Bob Ross',
+      showDetail: false
+    },
+    {
+      title: 'Supernatural: The Complete 12th Season',
+      description: "A (literally) neverending roadtrip.",
+      type: 'DVD',
+      contributor: "",
+      showDetail: false
+    },
+    {
+      title: 'Planet Earth II',
+      description: "Hours of beautiful but heart attack-inducing nature footage",
+      type: 'streaming video',
+      contributor: 'David Attenborough',
+      showDetail: false,
+    },
+    {
+      title: 'Titanic',
+      description: "The boat sinks.",
+      type: 'DVD',
+      contributor: 'James Cameron',
+      showDetail: false,
+    },
+    {
+      title: 'The Sirens of Titan',
+      description: "Mankind flung its advance agents ever outward, ever outward... it flung them like stones.",
+      type: 'book',
+      contributor: 'Kurt Vonnegut',
+      showDetail: false,
+    },
+    {
+      title: 'Better Call Saul',
+      description: "A slow-burning Breaking Bad prequel.",
+      type: 'streaming video',
+      contributor: '',
+      showDetail: false,
+    }
+  ]
+
 const app = new Vue({ /*vue instance*/
   el: "#app",
   data: {
-    title: "Vue appliation!",
-    message: "My vue template, wooooow!"
-  }
-});
-
-const app2 = new Vue({ /*vue instance*/
-  el: "#app2",
-  data: {
-    title: "Hello",
-    message: "I'm so glad you're here!",
-    name: "Kate",
-    img: {
-      src: "images/chomik_398000.jpg",
-      alt: "hamster"
+    title: "Public Library",
+    mediaList: media
+  },
+  methods: {
+    toggleDetail: function(item){
+      // console.log(item);
+      item.showDetail = !item.showDetail;
     }
   }
 });
-
-const book = new Vue({
-    el: '#book',
-    data: {
-      title: 'The Sirens of Titan',
-      author: 'Kurt Vonnegut',
-      summary: 'This is a summary of the Sirens of Titan.',
-      authorBio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      showDetails: false
-    },
-    methods: {
-
-    }
-});
-
-
-const colorsOfTheRainbow = ["red", "orange", "yelow", "green", "blue", "indigo", "violet"];
-
-const myRainbow = new Vue({
-  el: "#colors",
-  data: {
-    rainbow: colorsOfTheRainbow
-  }
-})
