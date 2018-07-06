@@ -8,11 +8,14 @@
   <body>
     <div id="app">
       <h1>{{ title }}</h1>
-      <select>
+      <select @change="filterList">
         <option>Select type of media</option>
+        <option v-for="product in mediaList">{{ product.type }}</option>
       </select>
-      <ul>
-        <li v-for="item in mediaList" @click="toggleDetail(item)">  <!-- click on li changes div's visability -->
+      <ul>    <!-- v-show:  if the type of item is the same as selected - show it-->
+        <li v-show="type === item.type"
+            v-for="item in mediaList"
+            @click="toggleDetail(item)">  <!-- click on li changes div's visability -->
           <h3> {{ item.title }}</h3>
           <div v-show="item.showDetail"> <!-- div's visability depends on showDetail value -->
             <p>{{ item.description }}</p>
