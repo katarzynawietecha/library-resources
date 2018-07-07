@@ -1,15 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1.8em;
+  vertical-align: baseline;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #b6dd94;
+  font-family: 'Arial', sans-serif;
 }
-div {
-  min-width: 250px;
-  max-width: 500px;
+
+.container {
+  max-width: 80%;
+  margin: auto;
   height: auto;
-  margin: 20px auto;
+  position: relative;
   background-color: #fff;
-  padding: 5px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
   box-shadow: 0 0 5px #8e8e8d;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-img {
-  max-width: 100%;
+
+h1 {
+  text-align: center;
+}
+
+p {
+  color: #323232;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  cursor: pointer;
+}
+
+ul li div {
+  margin-top: 5px;
+}
+
+li {
+  border: 1px solid #b3afaf;
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #fff;
+  position: relative;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+li[class*="arrow"]:after{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -13px;
+  font-size: 14px;
+  color: #333;
+}
+.arrowTop:after {
+  content: "\25B2";
+}
+
+.arrowDown:after {
+  content: "\25BC";
+}
+
+li.book {
+  border-left: 5px solid #99d3dc;
+}
+
+li.DVD {
+  border-left: 5px solid #eb727e;
+}
+
+li.streaming {
+  border-left: 5px solid #4dcc97;
+}
+
+li.CD {
+  border-left: 5px solid #b673f4;
+}
+
+select {
+  margin: 15px auto 25px;
+  display: block;
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #b3afaf;
 }

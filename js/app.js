@@ -64,21 +64,19 @@ const media = [
     }
   ]
 
-const app = new Vue({ /*vue instance*/
+const app = new Vue({
   el: "#app",
   data: {
-    title: "Public Library",
+    title: "Library resources",
     mediaList: media,
     type: ""
   },
   methods: {
     toggleDetail: function(item){
-      // console.log(item);
       item.showDetail = !item.showDetail;
     },
     filterList: function(event){
       this.type = event.target.value;
-      // console.log("this.type: "+this.type);
     }
   },
   computed: {
