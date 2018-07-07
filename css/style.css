@@ -75,16 +75,30 @@ li.book {
   border-left: 5px solid #99d3dc;
 }
 
-li.DVD {
+li.e-book {
   border-left: 5px solid #eb727e;
 }
 
-li.streaming {
+li.CD {
   border-left: 5px solid #4dcc97;
 }
 
-li.CD {
+li.magazine {
   border-left: 5px solid #b673f4;
+}
+
+li h3, li div {
+  padding-right: 25px;
+}
+
+li p {
+  text-align: justify;
+}
+
+@media (max-width: 400px){
+  li p {
+    text-align: left;
+  }
 }
 
 select {
@@ -93,4 +107,5 @@ select {
   background-color: #fff;
   padding: 5px 10px;
   border: 1px solid #b3afaf;
+  font-size: 0.9rem;
 }
