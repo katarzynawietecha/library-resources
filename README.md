@@ -7,7 +7,7 @@ The webpage contains resources of the self-development library. The user can vie
 
 **License**
 
- Quiz is released under the MIT License.
+This project is released under the MIT License.
 
 
 **Demo**
